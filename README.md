@@ -24,14 +24,15 @@ These labels are the name of the exercise as well as the start and end time of t
 <a href="https://github.com/Sepp28" title="CSV-File">
 <img src="BackgroundImages/ExampleCSV_File.png"
      alt="Sports Activities Icon"
-     style="width:648px;height:432px;" />
+     style="width:774px;height:221px;" />
 </a>
 
 Fig. 2: Data provided for the learning phase
 
+All you have to do to train the algorithm ist to record a video file for each exercice. It schould have a high quality (lighting, visibility of the person and all body parts during the complete exercise) and a reasonable number of repetitions. I did 10 doing as even movements as possible. As shown in Fig. 2 you have to tell the program what the name of the exercise is and roughly what frame it starts and ends with. Thats all. The algorithm will figure out how many repetitions it is.    
 Note that it is always possible to add further exercises. The learning algorthim will generate a modell for the new activity and will recognize it furtheron.
 
-## Learning: Algorithms
+## Learning: Algorithm
 The algorithms extract characteristic features of that exercise 
 
 ## Evaluation
