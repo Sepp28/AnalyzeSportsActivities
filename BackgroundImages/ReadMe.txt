@@ -1,0 +1,1 @@
+This Subfolder contains Images.
