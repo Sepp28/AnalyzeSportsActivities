@@ -43,16 +43,19 @@ MediaPipe provides the 3D coordinates of body landmarks. Since we are interesste
 
 Fig. 3: Landmarks from Mediapipe and Angles.
 
-Anges are always defined as angle between two lines. The lines are defined by two landmarks. E.g. the angle of **head_rotation** is defined as the angle between theline connection left and right ear (7 - 8) and the line connection left and right shoulder (11 - 12). In Fig. 3 the definition of all 23 angles are given by 4 landmarks.
+Anges are always defined as angle between two lines. The lines are defined by two landmarks. E.g. the angle of **head_rotation** is defined as the angle between the line connection left and right ear (7 - 8) and the line connection left and right shoulder (11 - 12). In Fig. 3 the definition of each of the 23 angles is given by 4 landmarks.
+
+....
 
 <a href="https://github.com/Sepp28" title="Example: left_balance">
-<img src="BackgroundImages/Anglein3dPose.png"
+<img src="BackgroundImages/AngleIn3dPose.png"
      alt="Sports Activities Icon"
      style="width:366px;height:238px;" />
 </a>
 
 Fig. 4: Example: left_balance in a 3d presentation.
 
+The angles are calculated for each frame. The time sequence of the left and right balance is shown in Fig. 5. Periodic behavior can be seen from about frame 100 to 700. The left and right balance is also highly correlated. This is an expected feature of the analysed squat exercise. 
 
 <a href="https://github.com/Sepp28" title="Graph of left and right balance over frame number">
 <img src="BackgroundImages/background2.png"
