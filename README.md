@@ -18,8 +18,8 @@ If you exercise regularly, it is desirable to have a recording of your activitie
 Activities are recorded by a camera and analyzed by various methods. The Algorithms detect the type of exercise (squat, jump, pull-up, ...) and count the number of repetitions. This is done by applying the body pose tracking algorithm from [MediaPipe](https://google.github.io/mediapipe/solutions/pose.html). The identified landmarks (Fig. 1) are used for identifying the type of exercise, measuring the speed of an exercies und count the number of repetitions.
 Unfortunately there is not much data available to train the system. Therefore a simple learning strategy is used. For each exercise one video with several repetitions of this exercise is provided together with a very limited number of required labels. 
 
-
-## Learning: Input data
+# Learning
+## Input data
 These labels are the name of the exercise as well as the start and end time of the exercises within the video is manual added. Fig. 2 shows the parameters and labels for 5 different exercises (mp4-files) to be learned. 
 <a href="https://github.com/Sepp28" title="CSV-File">
 <img src="BackgroundImages/ExampleCSV_File.png"
@@ -62,8 +62,11 @@ Fig. 4: Example: left_balance in a 3d presentation.
 
 Fig. 5: Graph of left and right balance over frame number.
 
+# Evaluation
 
-<a href="https://github.com/Sepp28/BackgroundImages/OverviewOfActivities.html" title="Graph of left and right balance over frame number">
+To evaluate a sports video many of the algorithmic steps are equivalent to that during learning. Except that the derived parameters are compared to these strored in the leaned models. 
+
+<a href="https://github.com/Sepp28/tree/main/BackgroundImages/OverviewOfActivities.html" title="Graph of left and right balance over frame number">
 <img src="BackgroundImages/OverviewOfActivities.png"
      alt="Sports Activities Icon"
      style="width:768px;height:237px;" />
@@ -78,8 +81,5 @@ Fig. 6: Final result: Overview and details of activities.
 
 The algorithms extract characteristic features of that exercise 
 
-## Evaluation
-
-
 ## Conclusion
-
+At the moment the system is in a prototype phase. A lot of improvements and code cleanups are necessary. Hence, code will be provided later.
