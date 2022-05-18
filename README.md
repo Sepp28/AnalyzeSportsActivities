@@ -1,6 +1,6 @@
 # Analyze Sports Activities
 <center>
-<a href="http://commonmark.org" title="Redirect to homepage">
+<a href="https://github.com/Sepp28" title="Person with Landmarks">
 <img src="BackgroundImages/pexels-ivan-samkov-7676505.png"
      alt="Sports Activities Icon"
      style="width:648px;height:432px;" />
@@ -33,6 +33,49 @@ All you have to do to train the algorithm ist to record a video file for each ex
 Note that it is always possible to add further exercises. The learning algorthim will generate a modell for the new activity and will recognize it furtheron.
 
 ## Learning: Algorithm
+MediaPipe provides the 3D coordinates of body landmarks. Since we are interessted in the movement of body parts, we convert the landmarks in angles between body parts. This makes us independent of the person's size and position relative to the camera. From the 33 landmarks we derive 23 angles. This is a first best guess choice and is probably suboptimal, see Fig. 3.
+
+<a href="https://github.com/Sepp28" title="Angle Definitions">
+<img src="BackgroundImages/AngleDefinitions2.png"
+     alt="Sports Activities Icon"
+     style="width:928px;height:392px;" />
+</a>
+
+Fig. 3: Landmarks from Mediapipe and Angles.
+
+Anges are always defined as angle between two lines. The lines are defined by two landmarks. E.g. the angle of **head_rotation** is defined as the angle between theline connection left and right ear (7 - 8) and the line connection left and right shoulder (11 - 12). In Fig. 3 the definition of all 23 angles are given by 4 landmarks.
+
+<a href="https://github.com/Sepp28" title="Example: left_balance">
+<img src="BackgroundImages/Anglein3dPose.png"
+     alt="Sports Activities Icon"
+     style="width:366px;height:238px;" />
+</a>
+
+Fig. 4: Example: left_balance in a 3d presentation.
+
+
+<a href="https://github.com/Sepp28" title="Graph of left and right balance over frame number">
+<img src="BackgroundImages/background2.png"
+     alt="Sports Activities Icon"
+     style="width:573px;height:430px;" />
+</a>
+
+Fig. 5: Graph of left and right balance over frame number.
+
+
+<a href="https://github.com/Sepp28/BackgroundImages/OverviewOfActivities.html" title="Graph of left and right balance over frame number">
+<img src="BackgroundImages/OverviewOfActivities.png"
+     alt="Sports Activities Icon"
+     style="width:768px;height:237px;" />
+</a>
+
+Fig. 6: Final result: Overview and details of activities.
+
+
+
+
+
+
 The algorithms extract characteristic features of that exercise 
 
 ## Evaluation
