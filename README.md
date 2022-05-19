@@ -55,7 +55,7 @@ Anges are always defined as angle between two lines. The lines are defined by tw
 
 Fig. 4: Example: left_balance in a 3d presentation.
 
-The angles are calculated for each frame. The time sequence of the left and right balance is shown in Fig. 5. Periodic behavior can be seen from about frame 100 to 700. The left and right balance is also highly correlated. This is an expected feature of the analysed squat exercise. 
+The angles are calculated for each frame. The time sequence of a squat exercise is shown in Fig. 5. The left and right balance showns a periodic behavior from about frame 100 to 700. In this time sequence both graphs are highly correlated. This is expected since both legs are bent in parallel. 
 
 <a href="https://github.com/Sepp28" title="Graph of left and right balance over frame number">
 <img src="BackgroundImages/background2.png"
@@ -65,9 +65,30 @@ The angles are calculated for each frame. The time sequence of the left and righ
 
 Fig. 5: Graph of left and right balance over frame number.
 
-# Evaluation
+As seen in Fig. 5 the correlation of both graphs and the periodic behaviour is not present in the video frames before start (#frame<100) and after end (#frame>700) of the exercise. Also the amplitude is much smaller because the hips don't move that much.
 
-To evaluate a sports video many of the algorithmic steps are equivalent to that during learning. Except that the derived parameters are compared to these strored in the leaned models. 
+## Derivation of a Model
+The models of individual exercises are derived one by one and added to a file containing all learned models.
+1. Identify the angles with the highest amplitude
+2. Determine the frequency of the periode (that might change over time).
+3. Compare the frequency of different angles and choose those that are very similar (The remaining angles form a fingerprint to identify the exercise).
+4. Add the new learned exercise to the json file containing all previously learned models
+
+# Evaluation
+## Analyzing a video
+Once the exercises are learned, exercises can be can be evaluated during training by analysing the videos.
+
+To evaluate a sports video many of the algorithmic steps are equivalent to that during learning. Except that the derived parameters are compared to these strored in the leaned models. Here the first steps of the analysis process are similar.
+
+1. Identify the angles with the highest amplitude
+2. Determine the frequency of the periode (that might change over time).
+3. Compare the frequency of different angles and choose those that are very similar (The remaining angles form a fingerprint to identify the exercise).
+4. Select the activity from the models json file that matches it the best.
+For further detailed analysis of the exercise, the timing of the frames is adjusted to get a constant frequency of the exercise (angles).
+5. Compute the frequnecy as a functuion over frames (=time).
+6. Time-warping: Adjust the number of frames to get a constant lenght of all periods.
+7. Find the exact number of repetitions: Average the angle over all periods and convolve it with the complete time sequence. The peaks in the resulting signal are rated against a threshold. The result gives the number of repetitions.
+8. As a final step, statistics can be generated. Here a line is added to a report, as shown in Fig. 6.
 
 <a href="https://github.com/Sepp28/tree/main/BackgroundImages/OverviewOfActivities.html" title="Graph of left and right balance over frame number">
 <img src="BackgroundImages/OverviewOfActivities.png"
@@ -85,4 +106,4 @@ Fig. 6: Final result: Overview and details of activities.
 The algorithms extract characteristic features of that exercise 
 
 ## Conclusion
-At the moment the system is in a prototype phase. A lot of improvements and code cleanups are necessary. Hence, code will be provided later.
+At the moment the system is in a prototype phase. A lot of improvements and code cleanups are necessary. Hence, code together with a more detailled description will be provided later.
