@@ -91,9 +91,9 @@ For further detailed analysis of the exercise, the timing of the frames is adjus
 8. As a final step, statistics can be generated. Here a line is added to a report, as shown in Fig. 6.
 
 <a href="https://github.com/Sepp28/tree/main/BackgroundImages/OverviewOfActivities.html" title="Graph of left and right balance over frame number">
-<img src="BackgroundImages/OverviewOfActivities.png"
+<img src="BackgroundImages/OverviewOfActivities2.png"
      alt="Sports Activities Icon"
-     style="width:768px;height:237px;" />
+     style="width:619px;height:142px;" />
 </a>
 
 Fig. 6: Final result: Overview and details of activities.
