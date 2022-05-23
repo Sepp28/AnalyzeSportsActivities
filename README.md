@@ -108,3 +108,5 @@ The algorithms extract characteristic features of that exercise
 
 ## Conclusion
 At the moment the system is in a prototype phase. A lot of improvements and code cleanups are necessary. Hence, code together with a more detailled description will be provided later.
+
+**[Imprint](https://github.com/Sepp28/Impressum)**
