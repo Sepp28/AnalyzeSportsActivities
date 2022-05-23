@@ -1,13 +1,14 @@
 # Analyze Sports Activities
 <center>
-<a href="https://github.com/Sepp28" title="Person with Landmarks">
+<a href="https://www.pexels.com/de-de/foto/frau-smartphone-tanzen-aufnahme-7676505/" title="Person with Landmarks">
 <img src="BackgroundImages/pexels-ivan-samkov-7676505.png"
      alt="Sports Activities Icon"
      style="width:648px;height:432px;" />
 </a>
 </center>
 
-Fig. 1: Human Pose Detection. Adapted from Ivan Samkov, www.pixels.com
+Fig. 1: Human Pose Detection. 
+Foto by Ivan Samkov from Pexels, www.pexels.com
 
 Various gymnastic exercises are recognized, classified and analyzed via video.
 
